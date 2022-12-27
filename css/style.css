@@ -1,0 +1,279 @@
+body {
+  font-family: "Quicksand", sans-serif;
+}
+.container-fluid {
+  min-height: 100vh;
+  position: relative;
+  padding: 0;
+  padding-bottom: 8rem;
+}
+
+/* Header  */
+
+header img {
+  width: 250px;
+}
+.header-image {
+  width: 50px;
+  height: 50px;
+  background-color: blueviolet;
+  margin: 0 auto;
+  display: inline-block;
+  display: none;
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 50px;
+}
+
+header nav a {
+  text-decoration: none;
+  margin-left: 35px;
+  color: black;
+}
+
+header a:link,
+header a:visited {
+  color: #000;
+}
+
+header a:hover:not(.active) {
+  color: rgb(0, 0, 0);
+}
+
+header h1 {
+  width: 40%;
+}
+
+header nav {
+  width: 40%;
+  text-align: end;
+}
+header div {
+  width: 20%;
+}
+
+.active {
+  border-bottom: 2px solid #ffd700;
+  cursor: default;
+}
+
+header nav a:hover:not(.active) {
+  animation: menu-bounce 0.4s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu-bounce {
+  0% {
+    border-bottom: 2px solid rgb(255, 182, 196, 0);
+    padding-bottom: 10px;
+  }
+  100% {
+    border-bottom: 2px solid rgb(255, 182, 196, 1);
+    padding-bottom: 0px;
+  }
+}
+
+:root {
+  --bs-link-hover-color: none;
+}
+
+/* bouncing text */
+.work span:nth-child(1) {
+  position: relative;
+  animation: animate 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.work span:nth-child(2) {
+  position: relative;
+  animation: animate 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+.work span:nth-child(3) {
+  position: relative;
+  animation: animate 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.work span:nth-child(4) {
+  position: relative;
+  animation: animate 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+@keyframes animate {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+/* Main */
+main {
+  margin-top: 20px;
+}
+
+.content-portrait {
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.content-landscape {
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.content-text {
+  font-weight: 600;
+  margin: 16px 0;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.content-link {
+  text-decoration: none;
+  font-weight: 800;
+  color: black;
+}
+
+.content-link:hover {
+  color: pink;
+}
+.about-text p,
+.about-text h5 {
+  text-align: center;
+}
+.about-text p {
+  font-weight: 500;
+}
+.about img {
+  max-width: 500px;
+}
+/* overlay for index */
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.img-holder img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.overlay .text-overlay {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-work:hover .overlay {
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.main-work {
+  position: relative;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 2.4rem;
+  padding: 0 25px;
+}
+footer img:hover {
+  transform: translateY(-10px);
+  transition: 0.2s;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Other CSS */
+
+hr {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+/* a {
+  text-decoration: none;
+  color: black;
+} */
+
+/* image holder */
+
+.image-holder1 {
+  width: 500px;
+  height: 500px;
+  background-color: darkslategrey;
+}
+
+.image-holder2 {
+  width: 100%;
+  height: 500px;
+  background-color: antiquewhite;
+}
+
+@media (max-width: 745px) {
+  header {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 35px;
+  }
+  .header-image {
+    display: none;
+  }
+  header h1 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  header nav {
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav a {
+    margin: 0;
+    padding: 10px;
+  }
+  footer p {
+    margin-bottom: 5px;
+  }
+}
