@@ -11,7 +11,7 @@
     <!-- Meta Tags -->
     <meta
       name="Description"
-      content="Lamptissue is an illustrator based in London. His colourful and quirky work is inspired by everyday situations."
+      content="Lamptissue is an illustrator based in Folkestone. His colourful and quirky work is inspired by everyday situations."
     />
     <!-- CSS Links -->
     <link
@@ -27,6 +27,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="script/date.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -78,28 +79,35 @@
           <div
             class="col-lg-6 col-md-6 d-flex justify-content-md-start justify-content-center"
           >
-            <p>All content © Neil Carribine 2022</p>
+            <p>All content © Neil Carribine <span class="yearDate"></span></p>
           </div>
           <div
             class="col-lg-6 col-md-6 d-flex justify-content-md-end justify-content-center"
           >
             <nav>
-              <a href="http://instagram.com/lamptissue" target="_blank"
-                ><img src="img/instagram-icon.svg"
-              /></a>
-              <a href="https://twitter.com/lamptissue" target="_blank"
-                ><img src="img/twitter-icon.svg"
-              /></a>
-              <a href="mailto: hello@lamptissue.com"
-                ><img src="img/email-icon.svg"
-              /></a>
+              <button class="btn">
+                <span class="background"
+                  ><a href="http://instagram.com/lamptissue" target="_blank"
+                    ><img src="img/instagram-icon.svg" /></a
+                ></span>
+              </button>
+              <button class="btn">
+                <span class="background"
+                  ><a href="https://twitter.com/lamptissue" target="_blank"
+                    ><img src="img/twitter-icon.svg" /></a
+                ></span>
+              </button>
+              <button class="btn">
+                <span class="background"
+                  ><a href="mailto: hello@lamptissue.com"
+                    ><img src="img/email-icon.svg" /></a
+                ></span>
+              </button>
             </nav>
           </div>
         </div>
       </footer>
     </div>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>

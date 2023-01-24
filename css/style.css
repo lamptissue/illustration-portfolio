@@ -8,6 +8,20 @@ body {
   padding-bottom: 8rem;
 }
 
+:root {
+  --bs-link-hover-color: none;
+}
+
+hr {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* Header  */
 
 header img {
@@ -79,10 +93,6 @@ header nav a:hover:not(.active) {
     border-bottom: 2px solid rgb(255, 182, 196, 1);
     padding-bottom: 0px;
   }
-}
-
-:root {
-  --bs-link-hover-color: none;
 }
 
 /* bouncing text */
@@ -167,6 +177,19 @@ main {
 .about img {
   max-width: 500px;
 }
+
+.socials {
+  font-size: 25px;
+  padding: 5px;
+  transition: 0.5s;
+}
+.socials:hover {
+  color: pink;
+}
+.social-div {
+  text-align: center;
+}
+
 /* overlay for index */
 
 .overlay {
@@ -213,26 +236,33 @@ footer {
   height: 2.4rem;
   padding: 0 25px;
 }
-footer img:hover {
-  transform: translateY(-10px);
-  transition: 0.2s;
-}
 
 footer p {
   margin: 0;
 }
 
-/* Other CSS */
-
-hr {
-  width: 90%;
-  margin: 1rem auto;
+.btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  padding: 0px;
 }
 
-/* a {
-  text-decoration: none;
-  color: black;
-} */
+.background {
+  display: flex;
+  align-items: center;
+}
+
+.background {
+  will-change: transform;
+  transition: transform 450ms;
+}
+
+.btn:hover .background {
+  transition: transform 150ms;
+  transform: translateY(-10px);
+}
 
 /* image holder */
 
@@ -248,6 +278,7 @@ hr {
   background-color: antiquewhite;
 }
 
+/* Mobile */
 @media (max-width: 745px) {
   header {
     height: auto;
