@@ -7,3 +7,13 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("mousemove", function (event) {
+  if (event.clientX > window.innerWidth / 2) {
+    document.body.classList.add("right-side");
+    document.body.classList.remove("left-side");
+  } else {
+    document.body.classList.add("left-side");
+    document.body.classList.remove("right-side");
+  }
+});
